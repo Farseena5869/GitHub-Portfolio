@@ -506,54 +506,73 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 /* --------------------------------------- */
-/* ----- Projects (Grid Layout) ----- */
+/* ----- Projects ----- */
 /* --------------------------------------- */
 
-.projects__list {
+.project__box {
     display: flex;
     align-items: center;
 }
 
-.project__grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Side-by-side: text and image */
-    gap: 30px; /* Space between text and image */
-    align-items: center;
-    background: #181818; /* Optional: subtle background */
-    padding: 30px;
-    border-radius: 12px;
+@media(max-width: 900px) {
+    .project__box {
+        align-items: initial;
+        flex-direction: column-reverse;
+    }
 }
 
-.project__box {
-    /* You can add more styling here if you want */
+.project__box:not(:last-child) {
+    margin-bottom: 25rem;
+}
+
+@media(max-width: 500px) {
+    .project__box:not(:last-child) {
+        margin-bottom: 20rem;
+    }
+}
+
+.project__links {
+    display: flex;
+    align-items: center;
+}
+
+.project__text {
+    flex: 0 0 30%;
+}
+
+.project__list {
+    /* list-style-type: square; */
+    list-style-position: inside;
+    margin-bottom: var(--gutter-normal);
+}
+
+.project__code {
+    display: block;
+    height: 3rem;
+    margin-left: var(--gutter-normal);
+    transition: all .3s;
+}
+
+.project__code:hover {
+    transform: scale(1.2);
 }
 
 .project__image-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: var(--gutter-normal);
 }
 
-.project__image {
-    max-width: 100%;
-    width: 350px; /* Adjust as desired (350-600px looks great) */
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.12);
-}
-
-@media (max-width: 900px) {
-    .project__grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    .project__image {
-        width: 100%;
-        max-width: 400px;
-        margin: 0 auto;
+@media(min-width: 901px) {
+    .project__image-box {
+        flex: 1;
+        margin: 0 0 0 10rem;
     }
 }
 
+@media(max-width: 900px) {
+    .project__code {
+        height: 4rem;
+    }
+}
 
 /* --------------------------------------- */
 /* ----- About ----- */
