@@ -511,8 +511,7 @@ body:not(.user-is-tabbing) a:focus {
 
 .projects__list {
     display: flex;
-    flex-direction: column;
-    gap: 40px; /* Vertical gap between projects */
+    align-items: center;
 }
 
 .project__grid {
