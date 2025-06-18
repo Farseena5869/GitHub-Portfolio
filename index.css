@@ -611,3 +611,38 @@ body:not(.user-is-tabbing) a:focus {
         padding: var(--gutter-medium) 0;
     } 
 }
+
+.projects__list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Adds vertical gap between projects */
+}
+
+.project__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 30px; /* Adds horizontal and vertical gap inside each project grid */
+  align-items: center; /* Vertically centers content */
+  background: #fff; /* Optional: adds a background, adjust as needed */
+  padding: 20px;
+  border-radius: 8px; /* Optional: rounded corners */
+}
+
+.project__image-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project__image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Optional: rounded corners for images */
+}
+
+@media (max-width: 768px) {
+  .project__grid {
+    grid-template-columns: 1fr; /* Stack on mobile */
+  }
+}
+
