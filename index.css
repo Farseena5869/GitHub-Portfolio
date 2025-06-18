@@ -506,30 +506,55 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 /* --------------------------------------- */
-/* ----- Clients ----- */
+/* ----- Projects (Grid Layout) ----- */
 /* --------------------------------------- */
 
-.client__logos {
+.projects__list {
     display: flex;
-    justify-content: space-between;
-    filter: invert(100%) grayscale(100%) opacity(.8);
+    flex-direction: column;
+    gap: 40px; /* Vertical gap between projects */
 }
 
-.client__logo {
-    height: 6.5rem;
-    max-width: 18rem;
+.project__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Side-by-side: text and image */
+    gap: 30px; /* Space between text and image */
+    align-items: center;
+    background: #181818; /* Optional: subtle background */
+    padding: 30px;
+    border-radius: 12px;
 }
 
-@media(max-width: 1240px) {
-    .client__logos {
-        overflow-x: scroll;
-        padding: var(--gutter-normal);
+.project__box {
+    /* You can add more styling here if you want */
+}
+
+.project__image-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project__image {
+    max-width: 100%;
+    width: 350px; /* Adjust as desired (350-600px looks great) */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+}
+
+@media (max-width: 900px) {
+    .project__grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
-
-    .client__logo:not(:last-of-type) {
-        margin-right: var(--gutter-medium);
+    .project__image {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
     }
 }
+
 
 /* --------------------------------------- */
 /* ----- About ----- */
