@@ -584,7 +584,7 @@ body:not(.user-is-tabbing) a:focus {
     align-items: center;
 }
 
-@media(max-width: 600px) {
+@media(max-width: 520px) {
     .about__content {
         flex-direction: column-reverse;
         align-items: initial;
@@ -595,7 +595,7 @@ body:not(.user-is-tabbing) a:focus {
     margin-bottom: var(--gutter-normal);
 }
 
-@media(min-width: 600px) {
+@media(min-width: 520px) {
     .about__text {
         flex: 0 0 35%;
     }
