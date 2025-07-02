@@ -518,8 +518,8 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .tools__image-box {
-    width: 480px;
-    height: 480px;
+    width: 380px;
+    height: 380px;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -535,7 +535,7 @@ body:not(.user-is-tabbing) a:focus {
     border-radius: 10px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 380px) {
     .tools__list {
         flex-direction: column;
         gap: 1.5rem;
