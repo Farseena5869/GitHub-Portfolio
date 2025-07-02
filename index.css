@@ -518,8 +518,8 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .tool__image-box {
-    width: 110px;
-    height: 110px;
+    width: 600px;
+    height: 600px;
     border-radius: 10px;
     display: flex;
     align-items: center;
