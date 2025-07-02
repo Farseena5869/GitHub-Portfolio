@@ -520,26 +520,21 @@ body:not(.user-is-tabbing) a:focus {
 .tool__image-box {
     width: 110px;
     height: 110px;
-    background: #f8f8f8;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    transition: box-shadow 0.2s;
 }
 
 .tool__image-box img {
-    max-width: 90px;
-    max-height: 90px;
+    max-width: 600px;
+    max-height: 600px;
     object-fit: contain;
     display: block;
 }
 
 .tool__image-box:hover {
-    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-}
-
+   
 @media (max-width: 600px) {
     .tools__list {
         flex-direction: column;
@@ -547,8 +542,8 @@ body:not(.user-is-tabbing) a:focus {
         align-items: center;
     }
     .tool__image-box {
-        width: 90px;
-        height: 90px;
+        width: 600px;
+        height: 600px;
     }
 }
 
